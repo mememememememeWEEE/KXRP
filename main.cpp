@@ -1,5 +1,6 @@
 #include <cstdio>
-#include "lib/glfw/glfw3.h"
+
+#include "src/kxrp.hpp"
 
 int main(void) {
     printf("H");

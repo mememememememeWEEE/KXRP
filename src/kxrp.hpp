@@ -7,3 +7,5 @@
 #else
 #define LOG(...)
 #endif
+
+namespace KXRP {};
