@@ -6,6 +6,11 @@
 
 using namespace KXRP;
 
+pipeline::pipeline(const char* VertPath, const char* FragPath) {
+	MakePipeline(VertPath, FragPath);
+}
+
+
 std::vector<char> pipeline::ReadFile(const char* path) {
     std::ifstream file{path, std::ios::ate | std::ios::binary};
     if (!file.is_open()) {
@@ -20,4 +25,12 @@ std::vector<char> pipeline::ReadFile(const char* path) {
 
     file.close();
     return buffer;
+}
+
+void pipeline::MakePipeline(const char* VertPath, const char* FragPath) {
+	const auto vert = ReadFile(VertPath);
+	const auto frag = ReadFile(FragPath);
+
+	LOG("VERT SIZE: %d", vert.size());
+	LOG("FRAG SIZE: %d", frag.size());
 }
