@@ -3,6 +3,7 @@
 #include "src/kxrp.hpp"
 #include "src/window.hpp"
 #include "src/pipeline.hpp"
+#include vulkan
 
 int main(void) {
     KXRP::window w(600, 400, "Test");
